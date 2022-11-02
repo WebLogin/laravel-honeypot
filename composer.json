@@ -1,0 +1,48 @@
+{
+    "name": "weblogin/laravel-honeypot",
+    "description": "Laravel form spam protection with honeypot technique",
+    "keywords": [
+        "laravel",
+        "honeypot",
+        "form request",
+        "laravel-honeypot",
+        "validation",
+        "weblogin"
+    ],
+    "homepage": "https://github.com/weblogin/laravel-honeypot",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "WebLogin",
+            "email": "contact@weblogin.fr"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/contracts": "^8.0|^9.0",
+        "illuminate/support": "^8.0|^9.0",
+        "illuminate/view": "^8.0|^9.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "WebLogin\\LaravelHoneypot\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WebLogin\\LaravelHoneypot\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WebLogin\\LaravelHoneypot\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
