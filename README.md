@@ -1,6 +1,6 @@
 # Laravel Honeypot
 
-Laravel Honeypot helps preventing bots from filling forms and creating spam. It uses a 2 inputs protections technique by adding one input that should be empty after form submission (obviously bots will fill it) and one input with the encrypted timestamp of the loading page, that help tracking the delay during loading page and form submission (because bots submit forms quickly). Both inputs are hidden from the users and have randomized names.
+Laravel Honeypot helps prevent bots from filling forms and creating spam. It uses a 2 inputs protections technique by adding one input that should be empty after form submission (obviously bots will fill it) and one input with the encrypted timestamp of the loading page, that help tracking the delay during loading page and form submission (because bots submit forms quickly). Both inputs are hidden from the users and have randomized names.
 
 <p align="center">
     <img src="docs/banner.jpg" alt="Collision logo" width="1000">
@@ -22,7 +22,7 @@ php artisan vendor:publish --provider="WebLogin\LaravelHoneypot\ServiceProvider"
 
 ## Usage
 
-You need to add the Blade component or Blade directive in your form. The only parameter is the name of your fake input (it's a basename the package will add a random suffix). Obviouly don't name it `honeypot`.
+You need to add the Blade component or Blade directive in your form. The only parameter is the name of your fake input (it's a basename the package will add a random suffix). Obviously don't name it `honeypot`.
 
 Blade component :
 
