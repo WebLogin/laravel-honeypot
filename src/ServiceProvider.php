@@ -46,10 +46,8 @@ class ServiceProvider extends BaseServiceProvider
 
         Blade::component('honeypot', FormFields::class);
 
-        // @TODO : Fix the directive
-        Blade::directive('honeypot', function ($expression) {
-            $name = trim($expression, "'");
-            return Blade::renderComponent(new FormFields($name));
+        Blade::directive('honeypot', function ($name) {
+            return "<?php echo Blade::renderComponent(new \WebLogin\LaravelHoneypot\View\Components\FormFields($name)) ?>";
         });
     }
 
