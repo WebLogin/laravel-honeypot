@@ -11,18 +11,13 @@ class ServiceProvider extends BaseServiceProvider
 
     public function boot()
     {
-        $this->registerConfig();
-        $this->registerTranslations();
-        $this->registerViews();
+        $this->bootConfig();
+        $this->bootTranslations();
+        $this->bootViews();
     }
 
 
-    public function register()
-    {
-    }
-
-
-    private function registerConfig()
+    private function bootConfig()
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/honeypot.php', 'honeypot');
 
@@ -30,7 +25,7 @@ class ServiceProvider extends BaseServiceProvider
     }
 
 
-    private function registerTranslations()
+    private function bootTranslations()
     {
         $this->loadTranslationsFrom(__DIR__ . '/../lang', 'honeypot');
 
@@ -40,7 +35,7 @@ class ServiceProvider extends BaseServiceProvider
     }
 
 
-    private function registerViews()
+    private function bootViews()
     {
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'honeypot');
 
