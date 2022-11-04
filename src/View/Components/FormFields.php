@@ -11,6 +11,7 @@ use Illuminate\View\Component;
 class FormFields extends Component
 {
 
+    public string $name;
     public string $encryptedTime;
     public string $potFieldName;
     public string $timeFieldName;
@@ -18,9 +19,10 @@ class FormFields extends Component
 
     public function __construct(string $name)
     {
+        $this->name = $name;
         $this->encryptedTime = Crypt::encrypt(time());
-        $this->potFieldName = $name . "[p" . Str::random(10) . "]";
-        $this->timeFieldName = $name . "[t" . Str::random(10) . "]";
+        $this->potFieldName = "p" . Str::random();
+        $this->timeFieldName = "t" . Str::random();
     }
 
 

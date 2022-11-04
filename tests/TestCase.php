@@ -1,5 +1,5 @@
 <?php
-namespace WebLogin\LaravelLookup\Tests;
+namespace WebLogin\LaravelHoneypot\Tests;
 
 use PHPUnit\Framework\TestCase as BaseTestCase;
 

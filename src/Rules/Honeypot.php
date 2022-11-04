@@ -83,9 +83,9 @@ class Honeypot implements ImplicitRule
         }
 
         $time = Crypt::decrypt($value);
-        $maxTime = $time + Config::get('honeypot.min_seconds');
+        $minTime = $time + Config::get('honeypot.min_seconds');
 
-        return (is_numeric($time) && (time() > $maxTime));
+        return (is_numeric($time) && (time() >= $minTime));
     }
 
 }
