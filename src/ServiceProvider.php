@@ -42,7 +42,7 @@ class ServiceProvider extends BaseServiceProvider
         Blade::component('honeypot', FormFields::class);
 
         Blade::directive('honeypot', function ($name) {
-            return "<?php echo Blade::renderComponent(new \WebLogin\LaravelHoneypot\View\Components\FormFields($name)) ?>";
+            return "<?php echo \Illuminate\Support\Facades\Blade::renderComponent(new \WebLogin\LaravelHoneypot\View\Components\FormFields($name)) ?>";
         });
     }
 
