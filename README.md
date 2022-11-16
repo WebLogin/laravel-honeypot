@@ -49,8 +49,8 @@ use WebLogin\LaravelHoneypot\Rules\Honeypot;
 ...
 
 $request->validate([
-    'title'.     => ['required', 'max:120'],
-    'content'.   => ['required', 'max:600'],
+    'title'      => ['required', 'max:120'],
+    'content'    => ['required', 'max:600'],
     'field-name' => [new Honeypot],
 ]);
 ```
